@@ -1,0 +1,17 @@
+<svg version="1.1" width="384" height="384" xmlns="http://www.w3.org/2000/svg">
+    <!--
+    Color rgb(116, 179, 204) comes from:
+    https://web.archive.org/web/20210803011441/https://github.com/GitHubPang
+    -->
+    <g transform="translate(0 -24)">
+        <path d="M 42 192
+             A 150 150 0 0 0 342 192
+             Z"
+              fill="rgb(116, 179, 204)"/>
+        <path d="M 42 192
+             A 75 90 0 0 1 192 192
+             Z"
+              fill="rgb(116, 179, 204)"/>
+        <circle cx="96" cy="150" r="12" fill="#000000"/>
+    </g>
+</svg>

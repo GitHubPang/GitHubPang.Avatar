@@ -1,4 +1,4 @@
-name: convert-png
+name: convert-avatar-to-png
 
 on:
   workflow_dispatch:

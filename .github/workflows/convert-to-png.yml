@@ -1,0 +1,29 @@
+name: convert-png
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+
+      - name: pwd
+        run: |
+          pwd
+          ls -la
+          which convert
+
+      - name: Convert svg to png
+        run: |
+          convert -background none -size 384x384 -format png avatar.svg /output/avatar.png
+          convert                  -size 384x384 -format png avatar.svg /output/avatar2.png
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: avatar-png
+          path: /output
+          if-no-files-found: error

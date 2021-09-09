@@ -15,8 +15,10 @@ jobs:
 
       - name: Convert svg to png
         run: |
-          convert -background none -size 384x384 -format png avatar.svg ./output/avatar.png
-          convert                  -size 384x384 -format png avatar.svg ./output/avatar2.png
+          convert -version
+          convert -verbose -background none        -size 384x384 -format png avatar.svg ./output/avatar.png
+          convert -verbose -background transparent -size 384x384 -format png avatar.svg ./output/avatar2.png
+          convert -verbose                         -size 384x384 -format png avatar.svg ./output/avatar3.png
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2.2.4

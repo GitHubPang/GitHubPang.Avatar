@@ -10,9 +10,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
 
+      - name: Create output directory
+        run: mkdir ./output
+
       - name: Convert svg to png
         run: |
-          mkdir ./output
           convert -background none -size 384x384 -format png avatar.svg ./output/avatar.png
           convert                  -size 384x384 -format png avatar.svg ./output/avatar2.png
 

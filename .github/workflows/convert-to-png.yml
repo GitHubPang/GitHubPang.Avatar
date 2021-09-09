@@ -18,12 +18,12 @@ jobs:
 
       - name: Convert svg to png
         run: |
-          convert -background none -size 384x384 -format png avatar.svg /output/avatar.png
-          convert                  -size 384x384 -format png avatar.svg /output/avatar2.png
+          convert -background none -size 384x384 -format png avatar.svg ./output/avatar.png
+          convert                  -size 384x384 -format png avatar.svg ./output/avatar2.png
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
           name: avatar-png
-          path: /output
+          path: ./output
           if-no-files-found: error

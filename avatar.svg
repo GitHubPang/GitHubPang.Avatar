@@ -9,13 +9,13 @@
              A 150 150 0 0 0 342 192
              Z"
               fill="rgb(116, 179, 204)"
-              stroke-width="0"
+              stroke="rgb(116, 179, 204)"
         />
         <path d="M 42 192
              A 75 90 0 0 1 192 192
              Z"
               fill="rgb(116, 179, 204)"
-              stroke-width="0"
+              stroke="rgb(116, 179, 204)"
         />
         <circle cx="96" cy="150" r="12" fill="#000000"/>
     </g>

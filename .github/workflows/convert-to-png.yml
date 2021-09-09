@@ -10,12 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
 
-      - name: pwd
-        run: |
-          pwd
-          ls -la
-          which convert
-
       - name: Convert svg to png
         run: |
           mkdir ./output

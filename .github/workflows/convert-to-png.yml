@@ -16,7 +16,7 @@ jobs:
       - name: Convert svg to png
         run: |
           convert -version
-          convert -verbose -background none -size 384x384 -format png avatar.svg ./output/avatar.png
+          convert -verbose -background '#fff' -size 384x384 -format png avatar.svg ./output/avatar.png
           cp ./output/avatar.png .
 
       - name: Commit files

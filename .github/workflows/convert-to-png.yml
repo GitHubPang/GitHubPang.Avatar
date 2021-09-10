@@ -17,10 +17,16 @@ jobs:
         run: |
           convert -version
           convert -verbose -background none -size 384x384 -format png avatar.svg ./output/avatar.png
+          cp ./output/avatar.png .
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2.2.4
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update changelog" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: avatar-png
-          path: ./output
-          if-no-files-found: error
+          branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
